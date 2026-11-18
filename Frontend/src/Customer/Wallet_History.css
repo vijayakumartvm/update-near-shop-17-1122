@@ -1,0 +1,249 @@
+.ns-wallet-history {
+    --wallet-green: #07843d;
+    --wallet-dark: #056b30;
+    --wallet-bg: #f2f8f4;
+    --wallet-mint: #e8f7e9;
+    --wallet-text: #14232e;
+    --wallet-muted: #687581;
+    --wallet-border: #e2eae5;
+    width: 100%;
+    min-height: 650px;
+    padding: 30px 5%;
+    background: var(--wallet-bg);
+    color: var(--wallet-text);
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.ns-wallet-history * {
+    box-sizing: border-box;
+}
+
+.ns-wallet-history-header {
+    max-width: 1380px;
+    margin: 0 auto 25px;
+}
+
+.ns-wallet-history-header h2 {
+    margin: 0 0 8px;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.ns-wallet-history-header p {
+    margin: 0;
+    color: var(--wallet-muted);
+    font-size: 13px;
+}
+
+.ns-wallet-history-layout {
+    max-width: 1380px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: 22px;
+    align-items: start;
+}
+
+.ns-wallet-history-sidebar {
+    padding: 22px 16px;
+    background: #fff;
+    border: 1px solid var(--wallet-border);
+    border-radius: 12px;
+}
+
+.ns-wallet-history-sidebar h3 {
+    margin: 0 0 18px;
+    font-size: 16px;
+}
+
+.ns-wallet-history-sidebar a {
+    display: block;
+    padding: 12px 13px;
+    margin-bottom: 7px;
+    color: var(--wallet-text);
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 7px;
+    transition: 0.2s ease;
+}
+
+.ns-wallet-history-sidebar a:hover,
+.ns-wallet-history-sidebar a.active {
+    color: var(--wallet-dark);
+    background: var(--wallet-mint);
+    font-weight: 600;
+}
+
+.ns-wallet-history-content {
+    min-width: 0;
+}
+
+.ns-wallet-history-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.ns-wallet-history-title h3 {
+    margin: 0 0 7px;
+    font-size: 19px;
+}
+
+.ns-wallet-history-title p {
+    margin: 0;
+    color: var(--wallet-muted);
+    font-size: 13px;
+}
+
+.ns-wallet-back {
+    display: inline-block;
+    padding: 10px 16px;
+    background: var(--wallet-green);
+    color: #fff;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ns-wallet-back:hover {
+    background: var(--wallet-dark);
+}
+
+.ns-wallet-history-summary {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.ns-wallet-history-summary>div {
+    padding: 20px;
+    background: #fff;
+    border: 1px solid var(--wallet-border);
+    border-radius: 11px;
+}
+
+.ns-wallet-history-summary span {
+    color: var(--wallet-muted);
+    font-size: 12px;
+}
+
+.ns-wallet-history-summary h2 {
+    margin: 12px 0 0;
+    color: var(--wallet-green);
+    font-size: 23px;
+}
+
+.ns-wallet-history-table {
+    padding: 22px;
+    background: #fff;
+    border: 1px solid var(--wallet-border);
+    border-radius: 12px;
+}
+
+.ns-wallet-history-table>h3 {
+    margin: 0 0 20px;
+    font-size: 16px;
+}
+
+.ns-wallet-history-empty {
+    padding: 45px 15px;
+    text-align: center;
+    border-top: 1px solid var(--wallet-border);
+}
+
+.ns-wallet-history-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wallet-green);
+    background: var(--wallet-mint);
+    border-radius: 50%;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.ns-wallet-history-empty h3 {
+    margin: 0 0 9px;
+    font-size: 16px;
+}
+
+.ns-wallet-history-empty p {
+    max-width: 390px;
+    margin: 0 auto 18px;
+    color: var(--wallet-muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.ns-wallet-history-empty a {
+    display: inline-block;
+    padding: 10px 18px;
+    color: #fff;
+    background: var(--wallet-green);
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ns-wallet-history-note {
+    margin-top: 18px;
+    padding: 15px 17px;
+    color: var(--wallet-muted);
+    background: var(--wallet-mint);
+    border: 1px solid var(--wallet-border);
+    border-radius: 9px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.ns-wallet-history-note strong {
+    color: var(--wallet-dark);
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+    .ns-wallet-history-layout {
+        grid-template-columns: 200px minmax(0, 1fr);
+        gap: 15px;
+    }
+    .ns-wallet-history {
+        padding: 25px 3%;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .ns-wallet-history-layout {
+        grid-template-columns: 1fr;
+    }
+    .ns-wallet-history-sidebar {
+        padding: 15px;
+    }
+    .ns-wallet-history-sidebar a {
+        display: inline-block;
+        margin: 3px;
+    }
+    .ns-wallet-history-summary {
+        grid-template-columns: 1fr;
+    }
+    .ns-wallet-history-title {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .ns-wallet-history-table {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,414 @@
+.ns-confirm-ticket-page {
+    min-height: 100vh;
+    background: #100b20;
+    color: #fff;
+    overflow: hidden;
+}
+
+.ns-confirm-ticket-main {
+    position: relative;
+    width: min(1250px, 94%);
+    margin: 0 auto;
+    padding: 55px 0 75px;
+}
+
+.ns-confirm-ticket-watermark {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    z-index: 0;
+    color: rgba(135, 92, 200, 0.09);
+    font-size: clamp(55px, 10vw, 135px);
+    font-weight: 900;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.ns-confirm-ticket-header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 30px;
+}
+
+.ns-confirm-ticket-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #53d68a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.ns-confirm-ticket-header h1 {
+    margin: 12px 0 8px;
+    color: #fff;
+    font-size: clamp(29px, 4vw, 43px);
+    font-weight: 700;
+}
+
+.ns-confirm-ticket-header p {
+    margin: 0;
+    color: #b9b0ca;
+    font-size: 15px;
+}
+
+
+/* MAIN TICKET */
+
+.ns-confirm-ticket-card {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 0.9fr 1px 1.1fr;
+    align-items: stretch;
+    gap: 35px;
+    padding: 42px;
+    border: 1px solid rgba(174, 132, 224, 0.22);
+    border-radius: 20px;
+    background: linear-gradient(145deg, #171027, #0b0815);
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.38);
+}
+
+.ns-confirm-ticket-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.ns-confirm-ticket-symbol {
+    display: grid;
+    place-items: center;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.ns-confirm-ticket-symbol.success {
+    color: #fff;
+    background: #078d4b;
+    box-shadow: 0 0 45px rgba(7, 141, 75, 0.3);
+}
+
+.ns-confirm-ticket-symbol.demo {
+    color: #ffd38b;
+    background: #68400d;
+    box-shadow: 0 0 35px rgba(215, 144, 38, 0.18);
+}
+
+.ns-confirm-ticket-left h2 {
+    max-width: 380px;
+    margin: 0 0 13px;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.35;
+}
+
+.ns-confirm-ticket-left p {
+    max-width: 380px;
+    margin: 0;
+    color: #bdb5cb;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.ns-confirm-ticket-status {
+    display: inline-flex;
+    margin-top: 22px;
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.ns-confirm-ticket-status.success {
+    background: rgba(35, 188, 107, 0.16);
+    color: #63e69b;
+    border: 1px solid rgba(99, 230, 155, 0.35);
+}
+
+.ns-confirm-ticket-status.demo {
+    background: rgba(235, 164, 53, 0.15);
+    color: #ffcb79;
+    border: 1px solid rgba(235, 164, 53, 0.35);
+}
+
+.ns-confirm-ticket-divider {
+    width: 1px;
+    background: linear-gradient( transparent, rgba(172, 137, 220, 0.5), transparent);
+}
+
+
+/* MOVIE DETAILS */
+
+.ns-confirm-ticket-right {
+    min-width: 0;
+}
+
+.ns-confirm-ticket-movie {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid rgba(164, 139, 200, 0.2);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.ns-confirm-ticket-poster {
+    width: 120px;
+    height: 170px;
+    overflow: hidden;
+    border-radius: 9px;
+    background: #241b38;
+}
+
+.ns-confirm-ticket-poster img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ns-confirm-ticket-poster>div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #5de49a;
+}
+
+.ns-confirm-ticket-poster>div span {
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.ns-confirm-ticket-small-label {
+    color: #57d891;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+}
+
+.ns-confirm-ticket-movie-info h3 {
+    margin: 8px 0 8px;
+    color: #fff;
+    font-size: 21px;
+    line-height: 1.3;
+}
+
+.ns-confirm-ticket-movie-info p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 9px 0;
+    color: #c5bdd2;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.ns-confirm-ticket-movie-info p svg {
+    flex-shrink: 0;
+    color: #52d58c;
+}
+
+
+/* QR AREA */
+
+.ns-confirm-ticket-qr-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 19px;
+    border: 1px solid rgba(164, 139, 200, 0.2);
+    border-radius: 13px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+.ns-confirm-ticket-qr-placeholder {
+    display: grid;
+    place-items: center;
+    width: 175px;
+    height: 145px;
+    border: 2px dashed rgba(180, 160, 208, 0.45);
+    border-radius: 10px;
+    background: #f4f0f9;
+}
+
+.ns-confirm-ticket-qr-pending {
+    display: flex;
+    max-width: 145px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: #69518c;
+    text-align: center;
+}
+
+.ns-confirm-ticket-qr-pending span {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.ns-confirm-ticket-qr-caption {
+    margin-top: 12px;
+    color: #bdb5cb;
+    font-size: 11px;
+}
+
+
+/* REFERENCE AND PRICE */
+
+.ns-confirm-ticket-reference,
+.ns-confirm-ticket-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 3px;
+    border-bottom: 1px solid rgba(164, 139, 200, 0.18);
+}
+
+.ns-confirm-ticket-reference span,
+.ns-confirm-ticket-total span {
+    color: #bdb5cb;
+    font-size: 12px;
+}
+
+.ns-confirm-ticket-reference strong {
+    overflow-wrap: anywhere;
+    color: #fff;
+    font-size: 13px;
+}
+
+.ns-confirm-ticket-total strong {
+    color: #5ee398;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+
+/* BUTTONS */
+
+.ns-confirm-ticket-actions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 28px;
+}
+
+.ns-confirm-ticket-actions button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 14px 20px;
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.ns-confirm-ticket-download {
+    border: 1px solid #4fd48a;
+    background: #078d4b;
+    color: #fff;
+}
+
+.ns-confirm-ticket-download:hover {
+    background: #06743e;
+}
+
+.ns-confirm-ticket-my-tickets {
+    border: 1px solid #8b70b8;
+    background: #34234e;
+    color: #fff;
+}
+
+.ns-confirm-ticket-my-tickets:hover {
+    background: #493166;
+}
+
+.ns-confirm-ticket-home {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    color: #fff;
+}
+
+.ns-confirm-ticket-home:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+    .ns-confirm-ticket-card {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 28px;
+    }
+    .ns-confirm-ticket-divider {
+        width: 100%;
+        height: 1px;
+        background: linear-gradient( to right, transparent, rgba(172, 137, 220, 0.5), transparent);
+    }
+    .ns-confirm-ticket-left {
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .ns-confirm-ticket-main {
+        width: 92%;
+        padding: 35px 0 45px;
+    }
+    .ns-confirm-ticket-card {
+        padding: 19px;
+        border-radius: 14px;
+    }
+    .ns-confirm-ticket-symbol {
+        width: 115px;
+        height: 115px;
+    }
+    .ns-confirm-ticket-symbol svg {
+        width: 65px;
+        height: 65px;
+    }
+    .ns-confirm-ticket-left h2 {
+        font-size: 21px;
+    }
+    .ns-confirm-ticket-movie {
+        grid-template-columns: 85px minmax(0, 1fr);
+        gap: 13px;
+        padding: 12px;
+    }
+    .ns-confirm-ticket-poster {
+        width: 85px;
+        height: 125px;
+    }
+    .ns-confirm-ticket-movie-info h3 {
+        font-size: 17px;
+    }
+    .ns-confirm-ticket-movie-info p {
+        font-size: 11px;
+    }
+    .ns-confirm-ticket-actions {
+        flex-direction: column;
+    }
+    .ns-confirm-ticket-actions button {
+        width: 100%;
+    }
+}

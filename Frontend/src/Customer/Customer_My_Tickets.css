@@ -1,0 +1,804 @@
+.ns-my-tickets-page {
+    min-height: 100vh;
+    background: #f3f8f4;
+    color: #153e35;
+}
+
+.ns-my-tickets-main {
+    width: min(1440px, 94%);
+    margin: 0 auto;
+    padding: 45px 0 65px;
+}
+
+
+/* PAGE HEADING */
+
+.ns-tickets-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.ns-tickets-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #07843d;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.ns-tickets-heading h1 {
+    margin: 12px 0 8px;
+    color: #153e35;
+    font-size: clamp(27px, 4vw, 36px);
+    font-weight: 800;
+}
+
+.ns-tickets-heading p {
+    margin: 0;
+    color: #718078;
+    font-size: 15px;
+}
+
+.ns-tickets-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 19px;
+    border: 1px solid #07843d;
+    border-radius: 9px;
+    background: #fff;
+    color: #07843d;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.ns-tickets-back-btn:hover {
+    background: #07843d;
+    color: #fff;
+}
+
+
+/* BOOKING COUNT */
+
+.ns-tickets-summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: fit-content;
+    min-width: 190px;
+    padding: 16px 22px;
+    margin-bottom: 25px;
+    border: 1px solid #dcebe0;
+    border-radius: 13px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(21, 62, 53, 0.04);
+}
+
+.ns-tickets-summary-icon {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #e6f5e9;
+    color: #07843d;
+}
+
+.ns-tickets-summary strong {
+    display: block;
+    color: #153e35;
+    font-size: 23px;
+    font-weight: 800;
+}
+
+.ns-tickets-summary span {
+    color: #718078;
+    font-size: 13px;
+}
+
+
+/* TICKET LIST */
+
+.ns-tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ns-ticket-card {
+    display: grid;
+    grid-template-columns: 155px minmax(0, 1fr);
+    gap: 24px;
+    padding: 21px;
+    border: 1px solid #e1ebe4;
+    border-radius: 17px;
+    background: #fff;
+    box-shadow: 0 5px 22px rgba(21, 62, 53, 0.045);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ns-ticket-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(21, 62, 53, 0.09);
+}
+
+.ns-ticket-poster {
+    width: 155px;
+    height: 215px;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #eaf5ec;
+}
+
+.ns-ticket-poster img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.ns-ticket-poster-placeholder {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #07843d;
+}
+
+.ns-ticket-poster-placeholder span {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* TICKET CONTENT */
+
+.ns-ticket-content {
+    min-width: 0;
+}
+
+.ns-ticket-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 21px;
+}
+
+.ns-ticket-label {
+    color: #07843d;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.ns-ticket-top h2 {
+    margin: 7px 0 0;
+    color: #153e35;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.ns-ticket-status {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    flex-shrink: 0;
+    padding: 9px 13px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.ns-ticket-status.demo {
+    background: #fff3dd;
+    color: #a75b00;
+}
+
+.ns-ticket-status.confirmed {
+    background: #e3f7e8;
+    color: #07843d;
+}
+
+
+/* MOVIE DETAILS */
+
+.ns-ticket-details {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px 25px;
+}
+
+.ns-ticket-details>div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    color: #07843d;
+}
+
+.ns-ticket-details span {
+    overflow-wrap: anywhere;
+    color: #596c62;
+    font-size: 14px;
+}
+
+
+/* BOTTOM */
+
+.ns-ticket-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 23px;
+    padding-top: 16px;
+    border-top: 1px solid #edf2ee;
+}
+
+.ns-ticket-booking-id {
+    overflow-wrap: anywhere;
+    color: #819087;
+    font-size: 12px;
+}
+
+.ns-ticket-view-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 17px;
+    border: none;
+    border-radius: 9px;
+    background: #07843d;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.ns-ticket-view-btn:hover {
+    background: #056b31;
+}
+
+
+/* DEMO WARNING */
+
+.ns-ticket-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 12px 14px;
+    border: 1px solid #f5dfb7;
+    border-radius: 9px;
+    background: #fff9ed;
+    color: #a75b00;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.ns-ticket-warning svg {
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+
+/* EMPTY STATE */
+
+.ns-tickets-empty {
+    display: flex;
+    min-height: 340px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
+    border: 1px dashed #b8d9c0;
+    border-radius: 17px;
+    background: #fff;
+    text-align: center;
+}
+
+.ns-tickets-empty-icon {
+    display: grid;
+    place-items: center;
+    width: 85px;
+    height: 85px;
+    margin-bottom: 17px;
+    border-radius: 50%;
+    background: #e8f6eb;
+    color: #07843d;
+}
+
+.ns-tickets-empty h2 {
+    margin: 0 0 10px;
+    color: #153e35;
+}
+
+.ns-tickets-empty p {
+    max-width: 450px;
+    color: #75857b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ns-tickets-empty button {
+    margin-top: 13px;
+    padding: 12px 23px;
+    border: none;
+    border-radius: 9px;
+    background: #07843d;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* VIEW TICKET MODAL */
+
+
+/* PREMIUM MOVIE TICKET MODAL */
+
+.ns-ticket-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px;
+    background: rgba(8, 20, 17, 0.78);
+    backdrop-filter: blur(8px);
+}
+
+.ns-ticket-modal {
+    position: relative;
+    width: min(760px, 100%);
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 0;
+    border: 1px solid #dcebe0;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+
+/* HEADER */
+
+.ns-ticket-modal-heading {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 35px;
+    background: linear-gradient(125deg, #153e35, #087b42);
+    color: #fff;
+    text-align: left;
+}
+
+.ns-ticket-modal-heading>svg {
+    display: none;
+}
+
+.ns-ticket-modal-heading::before {
+    content: "NEARSHOP CINEMA";
+    margin-bottom: 13px;
+    color: #a7edbf;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.ns-ticket-modal-heading h2 {
+    margin: 0 0 7px;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.ns-ticket-modal-heading p {
+    margin: 0;
+    color: #d9f5e1;
+    font-size: 14px;
+}
+
+
+/* CLOSE BUTTON */
+
+.ns-ticket-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 39px;
+    height: 39px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.13);
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ns-ticket-modal-close:hover {
+    background: #fff;
+    color: #07843d;
+}
+
+
+/* DETAILS */
+
+.ns-ticket-modal-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 28px;
+    margin: 25px 30px 0;
+    padding: 12px 22px;
+    border: 1px solid #e3eee6;
+    border-radius: 14px;
+    background: #f5faf6;
+}
+
+.ns-ticket-modal-info>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7px;
+    min-height: 68px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e0ebe2;
+    font-size: 13px;
+}
+
+.ns-ticket-modal-info>div:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+
+.ns-ticket-modal-info span {
+    color: #7c8d81;
+    font-size: 12px;
+}
+
+.ns-ticket-modal-info strong {
+    color: #153e35;
+    font-size: 14px;
+    font-weight: 800;
+    text-align: left;
+}
+
+
+/* WARNING */
+
+.ns-ticket-modal-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 20px 30px;
+    padding: 15px 17px;
+    border: 1px solid #f0d9a9;
+    border-radius: 11px;
+    background: #fff8e9;
+    color: #9b5900;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.ns-ticket-modal-warning svg {
+    flex-shrink: 0;
+}
+
+
+/* FOOTER BUTTON */
+
+.ns-ticket-modal-done {
+    width: calc(100% - 60px);
+    margin: 0 30px 27px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #07843d;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ns-ticket-modal-done:hover {
+    background: #056a32;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .ns-ticket-modal {
+        border-radius: 16px;
+    }
+    .ns-ticket-modal-heading {
+        padding: 25px 20px;
+    }
+    .ns-ticket-modal-heading h2 {
+        font-size: 22px;
+    }
+    .ns-ticket-modal-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 0 14px;
+        margin: 18px 16px 0;
+        padding: 10px 14px;
+    }
+    .ns-ticket-modal-info>div {
+        min-height: 62px;
+    }
+    .ns-ticket-modal-warning {
+        margin: 16px;
+    }
+    .ns-ticket-modal-done {
+        width: calc(100% - 32px);
+        margin: 0 16px 20px;
+    }
+    .ns-ticket-modal-close {
+        top: 14px;
+        right: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ns-ticket-modal-info {
+        grid-template-columns: 1fr;
+    }
+    .ns-ticket-modal-info>div:nth-last-child(2) {
+        border-bottom: 1px solid #e0ebe2;
+    }
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+    .ns-my-tickets-main {
+        width: 92%;
+        padding-top: 28px;
+    }
+    .ns-tickets-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .ns-ticket-card {
+        grid-template-columns: 105px minmax(0, 1fr);
+        gap: 14px;
+        padding: 13px;
+    }
+    .ns-ticket-poster {
+        width: 105px;
+        height: 155px;
+    }
+    .ns-ticket-top {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .ns-ticket-top h2 {
+        font-size: 19px;
+    }
+    .ns-ticket-status {
+        font-size: 10px;
+        padding: 7px 10px;
+    }
+    .ns-ticket-details {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .ns-ticket-details span {
+        font-size: 12px;
+    }
+    .ns-ticket-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .ns-ticket-view-btn {
+        width: 100%;
+    }
+    .ns-ticket-modal {
+        padding: 25px 17px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ns-ticket-card {
+        grid-template-columns: 1fr;
+    }
+    .ns-ticket-poster {
+        width: 100%;
+        height: 190px;
+    }
+    .ns-ticket-poster img {
+        object-position: center 30%;
+    }
+}
+
+
+/* PREMIUM MOVIE BOOKING CARDS */
+
+.ns-tickets-list {
+    gap: 24px;
+}
+
+.ns-ticket-card {
+    position: relative;
+    grid-template-columns: 165px minmax(0, 1fr);
+    gap: 25px;
+    padding: 22px;
+    border: 1px solid #dcebe0;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 7px 25px rgba(21, 62, 53, 0.055);
+    overflow: hidden;
+}
+
+.ns-ticket-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #07843d, #83d99b);
+}
+
+.ns-ticket-poster {
+    width: 165px;
+    height: 225px;
+    border-radius: 13px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.ns-ticket-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ns-ticket-top {
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.ns-ticket-top h2 {
+    font-size: 26px;
+    letter-spacing: -0.5px;
+}
+
+.ns-ticket-details {
+    gap: 20px 30px;
+}
+
+.ns-ticket-details>div {
+    padding: 5px 0;
+}
+
+.ns-ticket-details svg {
+    flex-shrink: 0;
+    width: 19px;
+    height: 19px;
+}
+
+.ns-ticket-details span {
+    color: #53695c;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.ns-ticket-bottom {
+    margin-top: 22px;
+    padding-top: 18px;
+    border-top: 1px dashed #cbded0;
+}
+
+.ns-ticket-booking-id {
+    color: #829087;
+    font-size: 12px;
+}
+
+.ns-ticket-view-btn {
+    padding: 12px 20px;
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(7, 132, 61, 0.15);
+}
+
+.ns-ticket-view-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(7, 132, 61, 0.22);
+}
+
+.ns-ticket-warning {
+    margin-top: 17px;
+    padding: 13px 16px;
+    border-radius: 10px;
+    background: #fff8eb;
+    border-color: #f1dfbd;
+    font-size: 12px;
+}
+
+@media (max-width: 760px) {
+    .ns-ticket-card {
+        grid-template-columns: 110px minmax(0, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+    .ns-ticket-poster {
+        width: 110px;
+        height: 160px;
+    }
+    .ns-ticket-top h2 {
+        font-size: 19px;
+    }
+}
+
+@media (max-width: 420px) {
+    .ns-ticket-card {
+        grid-template-columns: 1fr;
+    }
+    .ns-ticket-poster {
+        width: 100%;
+        height: 210px;
+    }
+}
+
+
+/* FIX: FIT MOVIE TICKET POPUP ON SCREEN */
+
+.ns-ticket-modal {
+    width: min(680px, 96%);
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ns-ticket-modal-heading {
+    padding: 22px 28px;
+}
+
+.ns-ticket-modal-info {
+    margin-top: 18px;
+    padding: 8px 18px;
+}
+
+.ns-ticket-modal-info>div {
+    min-height: 58px;
+    padding: 9px 0;
+}
+
+.ns-ticket-modal-warning {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.ns-ticket-modal-done {
+    margin-bottom: 20px;
+    padding: 12px;
+}
+
+@media (max-width: 600px) {
+    .ns-ticket-modal {
+        max-height: 88vh;
+    }
+    .ns-ticket-modal-heading {
+        padding: 22px 18px;
+    }
+}

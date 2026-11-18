@@ -1,0 +1,435 @@
+/* =========================================
+   NEARSHOP MOVIE SHOWTIMES PAGE
+========================================= */
+
+.ns-showtimes-page {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 25px 30px 45px;
+    box-sizing: border-box;
+    background: #f7faf7;
+    color: #153e35;
+    min-height: 70vh;
+}
+
+
+/* Breadcrumb */
+
+.ns-showtimes-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    color: #718078;
+}
+
+.ns-showtimes-breadcrumb button {
+    border: none;
+    background: transparent;
+    color: #07843d;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ns-showtimes-breadcrumb strong {
+    color: #153e35;
+}
+
+
+/* Main Layout */
+
+.ns-showtimes-layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+
+/* Movie Poster */
+
+.ns-showtimes-poster {
+    width: 100%;
+    position: sticky;
+    top: 20px;
+    overflow: hidden;
+    border-radius: 13px;
+    background: #e6f3e9;
+    box-shadow: 0 5px 18px rgba(21, 62, 53, 0.09);
+}
+
+.ns-showtimes-poster img {
+    display: block;
+    width: 100%;
+    height: 540px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.ns-showtimes-no-poster {
+    height: 540px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 65px;
+    background: #e6f3e9;
+}
+
+
+/* Right Content */
+
+.ns-showtimes-content {
+    min-width: 0;
+    padding: 5px 0;
+}
+
+
+/* Movie Header */
+
+.ns-showtimes-movie-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 23px;
+}
+
+.ns-showtimes-movie-header h1 {
+    margin: 0 0 8px;
+    color: #153e35;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.ns-showtimes-movie-header p {
+    margin: 0;
+    color: #64756c;
+    font-size: 15px;
+}
+
+.ns-showtimes-rating {
+    flex-shrink: 0;
+    color: #d99a00;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+
+/* Date Selector */
+
+.ns-showtimes-date-list {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+.ns-showtimes-date-list button {
+    min-width: 0;
+    min-height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid #dce9df;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #153e35;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ns-showtimes-date-list button span {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.ns-showtimes-date-list button strong {
+    font-size: 25px;
+}
+
+.ns-showtimes-date-list button small {
+    color: #849087;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.ns-showtimes-date-list button:hover,
+.ns-showtimes-date-list button.active {
+    background: #07843d;
+    border-color: #07843d;
+    color: #ffffff;
+}
+
+.ns-showtimes-date-list button.active small {
+    color: #e0f5e6;
+}
+
+
+/* Filters */
+
+.ns-showtimes-filters {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 14px 0 20px;
+    margin-bottom: 12px;
+    border-top: 1px solid #e5eee7;
+    border-bottom: 1px solid #e5eee7;
+}
+
+.ns-showtimes-filters select,
+.ns-showtimes-filters button {
+    min-height: 39px;
+    padding: 8px 13px;
+    border: 1px solid #d3e2d7;
+    border-radius: 25px;
+    background: #ffffff;
+    color: #153e35;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ns-showtimes-filters select:focus {
+    outline: 1px solid #07843d;
+}
+
+.ns-showtimes-filters button:hover,
+.ns-showtimes-filters button.active {
+    background: #07843d;
+    border-color: #07843d;
+    color: #ffffff;
+}
+
+.ns-showtimes-filters .ns-showtimes-clear {
+    color: #07843d;
+    border-color: #07843d;
+}
+
+
+/* Theatre List */
+
+.ns-showtimes-theatre-list {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.ns-showtimes-theatre {
+    display: grid;
+    grid-template-columns: minmax(160px, 0.85fr) minmax(0, 2fr);
+    gap: 18px;
+    align-items: center;
+    padding: 17px;
+    border: 1px solid #e1eae3;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(21, 62, 53, 0.04);
+    transition: 0.2s;
+}
+
+.ns-showtimes-theatre:hover {
+    border-color: #a6d4b2;
+    box-shadow: 0 5px 15px rgba(21, 62, 53, 0.08);
+}
+
+.ns-showtimes-theatre-info h3 {
+    margin: 0 0 6px;
+    color: #153e35;
+    font-size: 17px;
+}
+
+.ns-showtimes-theatre-info strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #07843d;
+    font-size: 13px;
+}
+
+.ns-showtimes-theatre-info p {
+    margin: 0;
+    color: #64756c;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Showtime Buttons */
+
+.ns-showtimes-slots {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(105px, 1fr));
+    gap: 9px;
+}
+
+.ns-showtimes-slots button {
+    min-height: 61px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 8px 5px;
+    border: 1px solid #a9d9b6;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #07843d;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.ns-showtimes-slots button strong {
+    font-size: 14px;
+}
+
+.ns-showtimes-slots button small {
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.ns-showtimes-slots button:hover,
+.ns-showtimes-slots button.selected {
+    background: #07843d;
+    border-color: #07843d;
+    color: #ffffff;
+}
+
+.ns-showtimes-empty {
+    color: #87948b;
+    font-size: 13px;
+}
+
+
+/* Selected Showtime */
+
+.ns-showtimes-selected {
+    position: sticky;
+    bottom: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 18px;
+    padding: 17px;
+    border: 1px solid #cce6d2;
+    border-radius: 11px;
+    background: #edf8ef;
+    box-shadow: 0 -4px 15px rgba(21, 62, 53, 0.05);
+}
+
+.ns-showtimes-selected strong {
+    color: #07843d;
+    font-size: 14px;
+}
+
+.ns-showtimes-selected p {
+    margin: 5px 0;
+    color: #153e35;
+    font-weight: 700;
+}
+
+.ns-showtimes-selected small {
+    color: #64756c;
+}
+
+.ns-showtimes-selected button {
+    padding: 13px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #07843d;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.ns-showtimes-selected button:hover {
+    background: #056b31;
+}
+
+
+/* Demo note */
+
+.ns-showtimes-demo-note {
+    margin-top: 22px;
+    color: #7a897f;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+    .ns-showtimes-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 18px;
+    }
+    .ns-showtimes-poster img,
+    .ns-showtimes-no-poster {
+        height: 400px;
+    }
+    .ns-showtimes-date-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .ns-showtimes-theatre {
+        grid-template-columns: 1fr;
+    }
+    .ns-showtimes-slots {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .ns-showtimes-page {
+        padding: 18px 12px 30px;
+    }
+    .ns-showtimes-layout {
+        grid-template-columns: 1fr;
+    }
+    .ns-showtimes-poster {
+        position: static;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .ns-showtimes-poster img,
+    .ns-showtimes-no-poster {
+        height: 380px;
+    }
+    .ns-showtimes-movie-header h1 {
+        font-size: 24px;
+    }
+    .ns-showtimes-date-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .ns-showtimes-date-list button {
+        min-height: 75px;
+    }
+    .ns-showtimes-filters {
+        gap: 8px;
+    }
+    .ns-showtimes-filters select,
+    .ns-showtimes-filters button {
+        font-size: 12px;
+    }
+    .ns-showtimes-slots {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .ns-showtimes-selected {
+        align-items: stretch;
+        flex-direction: column;
+    }
+    .ns-showtimes-selected button {
+        width: 100%;
+    }
+}
